@@ -1,0 +1,75 @@
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url('weatherbackground2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container{
+    margin: 20px auto;
+    width: 70%;
+    padding: 20px;
+}
+
+.city-container{
+    margin: 0;
+    margin-top: 20px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(245px, 1fr));
+    grid-template-rows: auto;
+    gap: 20px;
+    padding: 0;
+    overflow: hidden;
+}
+
+form{
+    margin: auto;
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+form label{
+    display: none;
+}
+
+form input{
+    margin-top: 30px;
+    padding: 5px;
+    overflow: hidden;
+}
+form input[type="text"]{
+    float: left;
+    width: 75%;
+    margin-right: 5px;
+}
+form input[type="submit"]{
+    float: right;
+    width: 25%;
+}
+
+.city-row{
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 10px;
+    background-color: rgb(218, 216, 216, 0.4);
+}
+
+.city-container .city-row img{
+    float: left;
+    /* object-fit: cover; */
+    width: 70%;
+}
+
+.city-container .city-row p{
+    float: right;
+    /* padding: 10px; */
+    width: 30%;
+    padding: 20px 0 20px 0;
+    padding-right: 10px;
+    text-align: center;
+}

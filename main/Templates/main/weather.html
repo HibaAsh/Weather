@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <form action="" method="post">
+        {% csrf_token %}
+        {{form}}
+        <input type="submit" value="Add City">
+    </form>
+    <div class="city-container">
+        {% for city_weather in weather_data %}
+            <div class="city-row">
+                <img src="{{city_weather.icon}}" alt="">
+                <p>
+                    <span>{{city_weather.city}}</span><br>
+                    <span>{{city_weather.temperature}} &#8451</span><br>
+                    <span>{{city_weather.description}}</span>
+                </p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
